@@ -20,7 +20,7 @@ import {
   Pencil
 } from 'lucide-react';
 import { useData } from './DataContext';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 const monthNames = [
   'Tháng 1', 'Tháng 2', 'Tháng 3', 'Tháng 4', 'Tháng 5', 'Tháng 6',
@@ -534,11 +534,12 @@ export function GanttView() {
                           <span className="truncate">{event.title}</span>
                           {event.type !== 'project' && (
                             <button
-                              onClick={() => handleDeleteEvent(event.id.replace('event-', ''))}
-                              className="opacity-0 group-hover:opacity-100 ml-2"
-                            >
-                              <Trash2 className="w-3 h-3" />
-                            </button>
+                                onClick={() => handleDeleteEvent(event.id.replace("event-", ""))}
+                                className="opacity-0 group-hover:opacity-100 ml-2"
+                                aria-label="Delete event"
+                              >
+                                <Trash2 className="w-3 h-3" />
+                              </button>
                           )}
                         </div>
                       </div>

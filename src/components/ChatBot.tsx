@@ -212,7 +212,11 @@ export function ChatBot() {
                       {message.sender === 'bot' && (
                         <div className="flex items-center gap-2 ml-2">
                           <button
+                            type="button"
                             onClick={() => handleLike(message.id)}
+                            title="Thích"
+                            aria-label="Thích tin nhắn"
+                            aria-pressed={likedMessages.has(message.id)}
                             className={`p-1 rounded hover:bg-gray-200 transition-colors ${
                               likedMessages.has(message.id) ? 'text-blue-500' : 'text-gray-400'
                             }`}
@@ -220,7 +224,11 @@ export function ChatBot() {
                             <ThumbsUp className="h-3 w-3" />
                           </button>
                           <button
+                            type="button"
                             onClick={() => handleDislike(message.id)}
+                            title="Không thích"
+                            aria-label="Không thích tin nhắn"
+                            aria-pressed={dislikedMessages.has(message.id)}
                             className={`p-1 rounded hover:bg-gray-200 transition-colors ${
                               dislikedMessages.has(message.id) ? 'text-red-500' : 'text-gray-400'
                             }`}

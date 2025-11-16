@@ -12,7 +12,7 @@ import { Header } from './components/Header';
 import { Footer } from './components/Footer';
 import { ChatBot } from './components/ChatBot';
 import { Toaster } from './components/ui/sonner';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { DataProvider, useData } from './components/DataContext';
 import { TaskDetailDialog } from './components/TaskDetailDialog';
 import { MyTasksSidebar } from './components/MyTasksSidebar';

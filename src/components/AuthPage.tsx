@@ -6,7 +6,7 @@ import { Card, CardContent, CardHeader, CardTitle } from './ui/card';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { Separator } from './ui/separator';
 import { LayoutDashboard, Mail, Lock, User, Building } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface AuthPageProps {
   onLogin: (userData: UserData) => void;
@@ -303,8 +303,8 @@ export function AuthPage({ onLogin, onBack }: AuthPageProps) {
                     </div>
                   </div>
                   <div className="flex items-start gap-2">
-                    <input type="checkbox" className="mt-1 rounded border-gray-300" required />
-                    <label className="text-sm text-gray-600">
+                    <input id="terms-checkbox" type="checkbox" className="mt-1 rounded border-gray-300" required />
+                    <label htmlFor="terms-checkbox" className="text-sm text-gray-600">
                       Tôi đồng ý với{' '}
                       <a href="#" className="text-indigo-600 hover:underline">
                         Điều khoản dịch vụ

@@ -9,7 +9,7 @@ import { Input } from './ui/input';
 import { Label } from './ui/label';
 import type { UserData } from './AuthPage';
 import { useData } from './DataContext';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 
 interface HeaderProps {
   user: UserData;

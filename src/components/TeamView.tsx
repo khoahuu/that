@@ -37,7 +37,7 @@ import {
 } from 'lucide-react';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from './ui/tabs';
 import { useData, type Team, type TeamMember } from './DataContext';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import type { UserData } from './AuthPage';
 import { MemberProfileDialog } from './MemberProfileDialog';
@@ -91,6 +91,7 @@ export function TeamView({ currentUser }: TeamViewProps) {
       description: teamDescription,
       color: teamColor,
       createdAt: new Date().toISOString().split('T')[0],
+      inviteCode: crypto.randomUUID(),
       projectIds: [],
       members: [],
     };

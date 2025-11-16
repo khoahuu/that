@@ -10,7 +10,7 @@ import { Separator } from './ui/separator';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from './ui/select';
 import { Slider } from './ui/slider';
 import { User, Mail, Phone, Building, Lock, Bell, Shield, Palette, Globe, Moon, Sun, Monitor, Save, RotateCcw } from 'lucide-react';
-import { toast } from 'sonner@2.0.3';
+import { toast } from 'sonner';
 import type { UserData } from './AuthPage';
 
 interface SettingsPageProps {
@@ -347,28 +347,28 @@ export function SettingsPage({ user, onUpdateUser }: SettingsPageProps) {
                   <p className="text-sm">Được giao công việc mới</p>
                   <p className="text-xs text-gray-500">Nhận email khi được giao việc</p>
                 </div>
-                <input type="checkbox" defaultChecked className="rounded" />
+                <input type="checkbox" defaultChecked className="rounded" aria-label="Được giao công việc mới" />
               </div>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm">Deadline sắp đến</p>
                   <p className="text-xs text-gray-500">Nhắc nhở trước 1 ngày</p>
                 </div>
-                <input type="checkbox" defaultChecked className="rounded" />
+                <input type="checkbox" defaultChecked className="rounded" aria-label="Deadline sắp đến" />
               </div>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm">Bình luận mới</p>
                   <p className="text-xs text-gray-500">Thông báo khi có người bình luận</p>
                 </div>
-                <input type="checkbox" defaultChecked className="rounded" />
+                <input type="checkbox" defaultChecked className="rounded" aria-label="Bình luận mới" />
               </div>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm">Cập nhật dự án</p>
                   <p className="text-xs text-gray-500">Thông báo thay đổi trong dự án</p>
                 </div>
-                <input type="checkbox" className="rounded" />
+                <input type="checkbox" className="rounded" aria-label="Cập nhật dự án" />
               </div>
             </CardContent>
           </Card>
@@ -392,14 +392,14 @@ export function SettingsPage({ user, onUpdateUser }: SettingsPageProps) {
                   <p className="text-sm">Tin nhắn mới</p>
                   <p className="text-xs text-gray-500">Hiển thị badge khi có tin nhắn</p>
                 </div>
-                <input type="checkbox" defaultChecked className="rounded" />
+                <input type="checkbox" defaultChecked className="rounded" aria-label="Tin nhắn mới" />
               </div>
               <div className="flex items-center justify-between">
                 <div>
                   <p className="text-sm">Nhắc nhở hàng ngày</p>
                   <p className="text-xs text-gray-500">Tóm tắt công việc mỗi sáng</p>
                 </div>
-                <input type="checkbox" defaultChecked className="rounded" />
+                <input type="checkbox" defaultChecked className="rounded" aria-label="Nhắc nhở hàng ngày" />
               </div>
             </CardContent>
           </Card>
